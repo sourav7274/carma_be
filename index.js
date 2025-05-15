@@ -71,7 +71,7 @@ app.post("/student", async (req, res) => {
 app.get("/students", async (req, res) => {
   try {
     const allStudents = await Student.find();
-    if (student) {
+    if (allStudents) {
       res.status(200).json({ message: "fetched successful", allStudents });
     } else {
       res.status(404).json({ message: "No Students available" });
